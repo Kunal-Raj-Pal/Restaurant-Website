@@ -1,0 +1,125 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+.nav{
+    background-color: rgb(0, 10, 23);
+    height: 3rem;
+    display: flex;
+    border-bottom: 1rem solid whitesmoke;
+}
+
+.logo{
+
+    background-color: burlywood;
+    width: 25%;
+    text-align: center;
+    padding-top: 0.7rem;
+}
+
+.nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 75%;
+}
+
+.nav ul a{
+    text-decoration: none;
+    color: rgb(177, 197, 197);
+    font-weight: bold;
+}
+
+
+/* Home start */
+
+.main{
+    height: 100vh;
+    background-color: rgb(0, 10, 23);
+    color: aliceblue;
+    display: flex;
+}
+
+.left{
+    /* background-color: red; */
+   display: flex;
+   justify-content: center;
+   padding-left: 10%;
+}
+
+#pizza{
+    height: 50%;
+    margin-top: 30%;
+   
+}
+
+
+.right{
+    background-color: rgb(0, 10, 23);
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+
+/* Home end */
+
+/* Menu start */
+
+.menu{
+    height: 100vh;
+    background-color: rgb(0, 10, 23);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+/* Menu end */
+
+/* About start */
+
+.about{
+    height: 100vh;
+    background-color: rgb(0, 10, 23);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.about p{
+    text-align: center;
+    font-size: larger;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.about p span{
+    font-weight: bold;
+    color: rgb(202, 253, 247);
+
+}
+
+/* About end */
+
+/* Contact start */
+
+
+/* Contact end */
+
+
+
+

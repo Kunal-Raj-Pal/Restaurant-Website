@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+<title>Contact us</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="Contact" style="background-color:rgb(234, 234, 153); color: black; padding-top:10vh; height: 100vh; display: flex; align-items: center; justify-content: center;">
+        <form style="border: 2px solid white; height: 500px; width: 500px; display: flex; flex-direction: column; padding-top: 5%; padding-left: 5%; ">
+                <h1>Contact Us☎️</h1>
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name" style="width: 80%; height: 5%; margin-top: 1%; border: 3px solid whitesmoke; border-radius: 2vh; padding-left: 2vh;">
+
+                <label style="margin-top: 15px;">Email</label>
+                <input type="email"placeholder="Enter your email" style="width: 80%; height: 5%; margin-top: 1%; border: 3px solid whitesmoke; border-radius: 2vh; padding-left: 2vh;">
+
+                <label  style="margin-top: 15px;">Feedback!</label>
+                <textarea name="Feedback" id="" placeholder="Enter your Feedback or quiery here!" style="width: 80%; height: 30%; margin-top: 1%; border: 3px solid whitesmoke;"></textarea>
+        </form>
+    </div>
+</div>
+{% endblock %}

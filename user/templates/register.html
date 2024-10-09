@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Registration Page</title>
+{% endblock %}
+
+{% block content %}
+<div class="Contact" style="background-color:rgb(234, 234, 153); color: black; padding-top:10vh; height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <form method='POST' action="{% url 'register' %}" style="border: 2px solid white; height: 500px; width: 500px; display: flex; flex-direction: column; padding-top: 5%; padding-left: 5%; ">
+        {% csrf_token %}
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+            <h1>Registration Form!</h1>
+            <label>Name</label>
+            <input type="text" name="nname" placeholder="Enter your name 🍰" style="width: 80%; height: 5%; margin-top: 1%; border: 3px solid whitesmoke; border-radius: 2vh; padding-left: 2vh;">
+
+            <label style="margin-top: 15px;">Username</label>
+            <input type="text" name="uname" placeholder="Create Username 🍩" style="width: 80%; height: 5%; margin-top: 1%; border: 3px solid whitesmoke; border-radius: 2vh; padding-left: 2vh;">
+
+            <label style="margin-top: 15px;">Email</label>
+            <input type="email" name="email" placeholder="Enter your email 🍫" style="width: 80%; height: 5%; margin-top: 1%; border: 3px solid whitesmoke; border-radius: 2vh; padding-left: 2vh;">
+              
+            <label style="margin-top: 15px;">Password</label>
+            <input type="password" name="passw" placeholder="Craete Password 🗝️" style="width: 80%; height: 5%; margin-top: 1%; border: 3px solid whitesmoke; border-radius: 2vh; padding-left: 2vh;">
+
+          <center>
+            <button type="submit" style="height: 2rem; width: 7rem; border:1px solid whitesmoke; border-radius: 2vh; margin-top: 10%; margin-left: -15vh; cursor: pointer;">Register 🍔</button>
+        </center>
+
+          <center><p style="margin-left: -15vh;">Already have account! <a href="{% url 'login' %}">Login Here!</a></p></center>
+    </form>
+</div>
+</div>
+{% endblock %}

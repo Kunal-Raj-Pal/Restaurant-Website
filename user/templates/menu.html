@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>menu</title>
+{% endblock %}
+
+{% block content %}
+<div class="menu" style="background-color:rgb(234, 234, 153); color: black; padding-top:10vh;">
+    <h1>This is our Menu!📃</h1>
+        <ul>
+            {% for i in menu %}
+            <li>{{i.menu}}</li>
+            {% endfor %}
+        </ul>
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'addmenu' %}"><button style="height: 2rem; width: 7rem; border:0.1rem solid whitesmoke; border-radius: 2vh; cursor: pointer;">Add Menu</button></a>
+        {% endif %}
+</div>
+{% endblock %}

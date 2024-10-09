@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+<title>home</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="container" style="background-color:rgb(234, 234, 153); height: 100vh; width: 100%;">
+    <div class="main-text" style="background-color:rgb(234, 234, 153);; ; height: 60vh; width: 100%; display: flex; flex-direction: column; justify-content:center; align-items: center; font-size: 10vh; line-height: .1; ">
+        <h1>FOODY</h1>
+        <h1>MOODY</h1>
+    </div>
+    <div class="icon" style="width: 100vh; display: flex; flex-direction: row; justify-content: space-around; transform: translateX(50%); font-size: 4vh;">
+        <span>
+            <h1 style="width: 10vh; heigth:10vh; background-color: yellow; border-radius: 50%;">🍔</h1>
+            <h1 style="width: 10vh; heigth:10vh; background-color: red; border-radius: 50%;">🍕</h1>
+        </span>
+        <span style="margin-left: 25%;">
+            <h1 style="width: 10vh; heigth:10vh; background-color: yellowgreen; border-radius: 50%;">🍰</h1>
+            <h1 style="width: 10vh; heigth:10vh; background-color: brown; border-radius: 50%;">🍩</h1>
+        </span>
+        <span style="margin-left: 25%;">
+            <h1 style="width: 10vh; heigth:10vh; background-color: pink; border-radius: 50%;">🍫</h1>
+            <h1 style="width: 10vh; heigth:10vh; background-color: orange; border-radius: 50%;">🌭</h1>
+         </span>
+    </div>
+    <hr style="background-color:rgb(234, 234, 153);  border: 1px solid whitesmoke">
+    {% comment %} Menu Start {% endcomment %}
+
+<div class="home-menu" style="background-color:rgb(234, 234, 153); height: 60vh; display: flex; flex-direction: column; align-items: center;">
+    <h1 style="background-color: orangered; border-radius: 50%;">🍩</h1>
+    <h1>Our Menu!</h1>
+    <ul>
+        {% for i in menu %}
+        <li>{{i.menu}}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% comment %} Menu end {% endcomment %}
+<hr style="background-color:rgb(234, 234, 153);  border: 1px solid whitesmoke">
+{% comment %} About start {% endcomment %}
+<div class="home-about" style="height: 80vh; background-color:rgb(234, 234, 153); display: flex; flex-direction: column; align-items: center; padding-top: 20vh;">
+    <h1 style="background-color: whitesmoke; border-radius: 50%;">🍰</h1>
+    <div class="about-border" style="border: 1px solid white; text-align:center; padding: 5vh;">
+    <h1>This is about us!</h1>
+
+    <h1>Welcome!💐</h1>
+
+    <p>First of all a very welcome❤️ from us, you <br> came to us that is very deligthful for us so <br> we have maintained the price💸 of every menu <br>items on a very reasonable price so that anyone<br> can enjoy this type of premium stuffs, so if you are<br> sitting in our <span style="font-weigth: 900;
+        color: orangered;">🍕K-FOODS</span> restaurent so don't worry about <br>the bill💸 just enjoy🍔 and pay! </p>
+</div>
+    </div>
+{% comment %} About end {% endcomment %}
+
+{% endblock %}
